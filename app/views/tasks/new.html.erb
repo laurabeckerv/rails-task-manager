@@ -1,0 +1,14 @@
+<%= form_with model: @task do |f| %>
+  <%= f.label :title, "Title" %>
+  <%= f.text_field :title %>
+  <p>
+  <%= f.label :details, "Details" %>
+  <%= f.text_field :details %>
+  <p>
+  <%= f.label :completed, "Have you already completed the task? 0 for no, 1 for yes" %>
+  <%= f.number_field :completed %>
+  <p>
+  <%= f.submit %>
+<% end %>
+<p>
+<%= link_to "Go back to current tasks", index_path %>
